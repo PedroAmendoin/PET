@@ -10,7 +10,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'cadastrados',
+    loadChildren: () => import('./cadastrados/cadastrados.module').then( m => m.CadastradosPageModule)
   },
+
 ];
 
 @NgModule({

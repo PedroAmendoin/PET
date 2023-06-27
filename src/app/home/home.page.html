@@ -22,7 +22,7 @@
 <ion-col>
   <label>
     <span style="margin-left: 30px;">Nome:</span>
-    <input required placeholder="" type="text" style="margin: 60px; margin-left: 10px;"/>
+    <ion-input [(ngModel)]="cachorro.nome" required placeholder="" type="text" style="background-color: rgb(161, 160, 160); border-radius: 20px;"></ion-input>
   </label>
 </ion-col>
   </ion-row>
@@ -33,7 +33,7 @@
 <ion-col>
   <label>
     <span style="margin-left: 30px;">idade:</span>
-    <input required placeholder="" type="text" height="77px;" style="margin: 60px; margin-left: 10px;"/>
+    <ion-input [(ngModel)]="cachorro.idade" required placeholder="" type="text" style="background-color: rgb(161, 160, 160); border-radius: 20px;"></ion-input>
   </label>
 </ion-col>
 </ion-row> 

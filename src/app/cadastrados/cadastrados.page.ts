@@ -19,4 +19,5 @@ export class CadastradosPage implements OnInit {
             localStorage.clear();
             this.nav.navigateRoot('/');
         };
+
 }

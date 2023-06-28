@@ -8,16 +8,42 @@ import { NavController } from '@ionic/angular';
 })
 export class CadastradosPage implements OnInit {
 
+  cachorro = {
+    nome: '',
+    idade: '',
+    imagem: ''
+  }
+
+  public imagem = '';
+
+
   constructor(
-    public nav: NavController) { }
+    public nav: NavController
+    ) { }
 
   ngOnInit() {
+    this.carregaDados();
   }
+  
+  IonViewDidEnter(){
+    this.carregaDados();
+ }
+  
+  ExcluiDados() {
+    this.cachorro.nome = '';
+    this.cachorro.idade = '';
+    this.nav.navigateRoot('/');
+      }
 
   async voltar() {
    
-            localStorage.clear();
             this.nav.navigateRoot('/');
         };
+
+carregaDados(){
+  this.cachorro.nome= localStorage.getItem('nome') !;
+  this.cachorro.idade= localStorage.getItem('idade') !;
+   this.cachorro.imagem= localStorage.getItem('imagem') !;
+}
 
 }

@@ -6,15 +6,26 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large" style="margin-left: 65px">cadastrados:</ion-title>
     </ion-toolbar>
 </ion-header>
 
+
+
 <ion-row>
   <ion-col>
-     <img src="{imagem}" width="200" height="200"/>
-      </ion-col>
+
+    <img src="{{cachorro.imagem}}" width="200" height="200" class="foto"/>
+     <ion-card> nome: {{cachorro.nome}} </ion-card>
+     
+     <ion-card> idade: {{cachorro.idade}}</ion-card>
+
+     <ion-button (click)="ExcluiDados()">Excluir</ion-button>
+
+    </ion-col>
 </ion-row>
+
 </ion-content>

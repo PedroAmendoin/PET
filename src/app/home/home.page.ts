@@ -18,7 +18,7 @@ export class HomePage {
   }
 
   public url = 'https://dog.ceo/api/breeds/image/random';
-  public imagem = '';
+  public imagem = "";
   public result: any = {};
   constructor(
     private http: HttpClient,
@@ -28,29 +28,33 @@ export class HomePage {
 
   cadastrar() {
     
-    this.consultaApi().subscribe(
-      (resp) => {
-        this.result = resp;
-        this.imagem = this.result.message;
-      },
-      (error) => { }
-      );
       this.salvarDados();
       this.nav.navigateForward('cadastrados');
 
   }
 
-  salvarDados() {
+  avancar(){
+ this.nav.navigateForward('cadastrados');
+  }
+
+  async salvarDados() {
     localStorage.setItem("nome", this.cachorro.nome)
     localStorage.setItem("idade", this.cachorro.idade)
-    localStorage.setItem("imagem", this.imagem)
+    localStorage.setItem("imagem", await this.gerar())
     console.log(this.cachorro);
   }
 
-  ExcluiDados() {
-    this.cachorro.nome = '';
-    this.cachorro.idade = '';
 
+  gerar(){
+  return new Promise<string>(async (resolve, reject) => {
+    try {
+      const resp= await this.consultaApi().toPromise()
+      this.result=resp
+      resolve(this.result.message)
+    } catch (error) {
+      reject(error)
+    }
+  })
   }
 
   consultaApi() {

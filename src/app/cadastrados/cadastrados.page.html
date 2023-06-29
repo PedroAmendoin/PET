@@ -1,13 +1,14 @@
 <ion-content [fullscreen]="true">
 
- <div style="background-color: black ;background-image: url('../../assets/chuva.gif');">
+ <div class="chuva">
 <ion-button (click)="voltar()">voltar</ion-button>
 
-  <ion-header>
-    <ion-toolbar>
-      <ion-title size="large" style="background-color: black ;color:white; text-align: center;">cadastrados:</ion-title>
-    </ion-toolbar>
-</ion-header>
+    <ion-row>
+      <ion-col style="margin-top: 50px; margin-left: 37%;">
+      <span size="large" style="background-color: black ;color:white; text-align: center">cadastrados:</span>
+      </ion-col>
+    </ion-row>
+      
 
 
 
@@ -41,20 +42,13 @@
     </p>
   </ion-col>
 </ion-row>
-<ion-row>
 
-  <ion-col>
-    <ion-button  (click)="ExcluiDados()">Excluir</ion-button>
+<ion-row>
+  <ion-col style="margin-bottom: 50px; margin-left: 37%;">
+    <ion-button (click)="ExcluiDados()">Excluir</ion-button>
   </ion-col>
 </ion-row>
 
-
-<ion-row>
-  <ion-col>
-    <p style="margin-top: 50%;">
-    </p>
-  </ion-col>
-</ion-row>
-</div>
+ </div>
 
 </ion-content>

@@ -30,7 +30,8 @@ export class CadastradosPage implements OnInit {
  }
   
   ExcluiDados() {
-    localStorage.clear();
+    this.cachorro.nome =''
+    this.cachorro.idade =''
     this.nav.navigateRoot('/');
       }
 

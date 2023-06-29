@@ -1,11 +1,11 @@
 
 
 <ion-content [fullscreen]="true">
-  <div style="background-color: black;" class="chuva">
+  <div class="chuva">
   <ion-header>
    
       <ion-title size="large" style="color:white">petshop</ion-title>
-    <img src="../../assets/sleepdog.gif" style="width: 20%; position: relative; left: 150px;">
+    <img src="../../assets/sleepdog.gif" style="width: 20%; position: relative; left: 150px; background-size: cover;">
   
   </ion-header>
 
@@ -15,7 +15,7 @@
 <ion-col style="margin-top: 50px;">
   <label>
     <span style="color:white">Nome:</span>
-    <ion-input  [(ngModel)]="cachorro.nome" required placeholder="" type="text" style="border-radius: 20px; background-color: white; text-align: center;"></ion-input>
+    <ion-input [(ngModel)]="cachorro.nome"  placeholder="" required="" type="text" style="border-radius: 20px; background-color: white; text-align: center;"></ion-input>
   </label>
 </ion-col>
   </ion-row>
@@ -26,7 +26,7 @@
 <ion-col style="margin-top: 50px;">
   <label>
     <span style="color:white">idade:</span>
-    <ion-input  [(ngModel)]="cachorro.idade" required placeholder="" type="text"  style="border-radius: 20px; background-color: white; text-align: center"></ion-input>
+    <ion-input  [(ngModel)]="cachorro.idade"   placeholder="" required type="text"   style="border-radius: 20px; background-color: white; text-align: center"></ion-input>
   </label>
 </ion-col>
 </ion-row> 
@@ -42,17 +42,10 @@
 </ion-row> 
 
  <ion-row>
-<ion-col class="espaco">
+<ion-col class="espaco" style="margin-bottom: 70px;">
 <ion-button  style="border-radius: 20px;"  shape="block" (click)="avancar()">avançar</ion-button>
 </ion-col>
 </ion-row> 
-
-<ion-row>
-  <ion-col>
-    <p style="margin-top: 17%;">
-    </p>
-  </ion-col>
-</ion-row>
 
 </div>
 </ion-content>

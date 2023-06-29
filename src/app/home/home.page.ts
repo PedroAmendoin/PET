@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';;
-import { NavController } from '@ionic/angular';
+import { IonInput, IonLabel, NavController } from '@ionic/angular';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -29,6 +29,8 @@ export class HomePage {
   cadastrar() {
     
       this.salvarDados();
+      this.cachorro.nome =''
+      this.cachorro.idade=''
       this.nav.navigateForward('cadastrados');
 
   }

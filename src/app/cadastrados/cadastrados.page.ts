@@ -11,7 +11,7 @@ export class CadastradosPage implements OnInit {
   cachorro = {
     nome: '',
     idade: '',
-    imagem: ''
+    imagem: '',
   }
 
   public imagem = '';
@@ -30,8 +30,7 @@ export class CadastradosPage implements OnInit {
  }
   
   ExcluiDados() {
-    this.cachorro.nome = '';
-    this.cachorro.idade = '';
+    localStorage.clear();
     this.nav.navigateRoot('/');
       }
 

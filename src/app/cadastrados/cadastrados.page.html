@@ -1,31 +1,60 @@
-<ion-header [translucent]="true">
-  <ion-button (click)="voltar()">voltar</ion-button>
-  <ion-toolbar>
-    <ion-title>cadastrados</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
 
-  <ion-header collapse="condense">
+ <div style="background-color: black ;background-image: url('../../assets/chuva.gif');">
+<ion-button (click)="voltar()">voltar</ion-button>
+
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large" style="margin-left: 65px">cadastrados:</ion-title>
+      <ion-title size="large" style="background-color: black ;color:white; text-align: center;">cadastrados:</ion-title>
     </ion-toolbar>
 </ion-header>
 
 
 
 <ion-row>
-  <ion-col>
+  <ion-col style="margin-top: 50px;">
 
     <img src="{{cachorro.imagem}}" width="200" height="200" class="foto"/>
-     <ion-card> nome: {{cachorro.nome}} </ion-card>
-     
-     <ion-card> idade: {{cachorro.idade}}</ion-card>
-
-     <ion-button (click)="ExcluiDados()">Excluir</ion-button>
 
     </ion-col>
+ </ion-row>
+
+<ion-row>
+  <ion-col style="margin-top: 25px;">
+
+ <ion-card style="text-align: center; width: 200px; height: 20px; margin: 0 auto">nome: {{cachorro.nome}}</ion-card>
+ 
+    </ion-col>
+     </ion-row>
+
+     <ion-row>
+  <ion-col style="margin-top: 25px;">
+
+  <ion-card style="text-align: center; width: 200px; height: 20px; margin: 0 auto;">idade: {{cachorro.idade}}</ion-card>
+
+    </ion-col>
+ </ion-row>
+
+<ion-row>
+  <ion-col>
+    <p style="margin-top: 12%;">
+    </p>
+  </ion-col>
 </ion-row>
+<ion-row>
+
+  <ion-col>
+    <ion-button  (click)="ExcluiDados()">Excluir</ion-button>
+  </ion-col>
+</ion-row>
+
+
+<ion-row>
+  <ion-col>
+    <p style="margin-top: 50%;">
+    </p>
+  </ion-col>
+</ion-row>
+</div>
 
 </ion-content>

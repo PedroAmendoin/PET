@@ -28,11 +28,17 @@ export class CadastradosPage implements OnInit {
   IonViewDidEnter(){
     this.carregaDados();
  }
-  
+
+ esvazia(){
+this.cachorro.nome=localStorage.removeItem('nome') !;
+this.cachorro.idade=localStorage.removeItem('idade') !;
+  }
+
+
   ExcluiDados() {
-    this.cachorro.nome =''
-    this.cachorro.idade =''
-    this.nav.navigateRoot('/');
+   this.esvazia()
+   this.nav.navigateRoot('/');
+    
       }
 
   async voltar() {
